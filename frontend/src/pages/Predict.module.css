@@ -1,0 +1,280 @@
+.main {
+  min-height: calc(100vh - 60px);
+  padding: 4rem 2rem 6rem;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Header ──────────────────────────────────── */
+.header { text-align: center; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Drop zone ───────────────────────────────── */
+.dropZone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 3.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--bg-card);
+}
+
+.dropZone:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.dropOver {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  transform: scale(1.01);
+}
+
+.dropDisabled { cursor: not-allowed; opacity: 0.5; }
+
+.hiddenInput { display: none; }
+
+.dropIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.dropTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.dropSub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.dropLink {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.errorMsg {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fff0f0;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: #b91c1c;
+}
+
+[data-theme="dark"] .errorMsg {
+  background: #1f0a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+/* ── Loading ─────────────────────────────────── */
+.loadingCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.loadingLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.loadingLabel em { font-style: italic; color: var(--text-muted); }
+
+.loadingSub {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+/* ── Waveform animation ──────────────────────── */
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 48px;
+  margin-bottom: 1.2rem;
+}
+
+.waveBar {
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transform-origin: center;
+  opacity: 0.25;
+}
+
+/* ── Result card ─────────────────────────────── */
+.resultCard {
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.resultEmoji {
+  font-size: 3.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.resultMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.resultLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.resultGenre {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  text-transform: capitalize;
+  line-height: 1.05;
+}
+
+.resultConf {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── File info bar ───────────────────────────── */
+.fileInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  padding: 0 0.25rem;
+}
+
+.resetBtn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+}
+
+.resetBtn:hover { color: var(--text); background: var(--bg-subtle); }
+
+/* ── Scores card ─────────────────────────────── */
+.scoresCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.scoresTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.confList { display: flex; flex-direction: column; gap: 0.65rem; }
+
+.confRow {
+  display: grid;
+  grid-template-columns: 110px 1fr 44px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.confGenre {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.confTrack {
+  height: 6px;
+  background: var(--bg-subtle);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.confFill {
+  height: 100%;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--accent) calc(var(--is-max) * 100%), var(--border) calc((1 - var(--is-max)) * 100%));
+}
+
+.confPct {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-feature-settings: 'tnum';
+  text-align: right;
+}

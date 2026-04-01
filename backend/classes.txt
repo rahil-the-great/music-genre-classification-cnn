@@ -1,0 +1,10 @@
+Blues
+Classical
+Country
+Disco
+HipHop
+Jazz
+Metal
+Pop
+Reggae
+Rock
