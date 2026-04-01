@@ -40,6 +40,14 @@ genre-classifier/
 
 ### Step 1 — Place your model files
 
+## Model
+
+Due to size constraints, the trained CNN model (.h5) is not included in this repository.
+
+You can:
+- Train the model using the provided code
+- Or download the model from the link below https://colab.research.google.com/drive/1_saWPbNVF2FvbvnOLxcsQ9FoOkc_ybrs?usp=sharing
+
 Copy your trained files into `backend/`:
 
 ```
