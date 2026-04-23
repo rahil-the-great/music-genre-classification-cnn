@@ -1,4 +1,4 @@
-# SoundLabel — Music Genre Classifier
+# MelGenre — Music Genre Classifier
 
 A full-stack web app: React.js frontend + Flask API backend for CNN-based music genre classification using the GTZAN dataset.
 
